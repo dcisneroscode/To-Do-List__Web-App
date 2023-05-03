@@ -47,4 +47,4 @@ def get_all_user() -> dict:
 def delete_user(id: int):
     db = Session()
     User_Services(db).delete_user(id)
-    return JSONResponse(status_code=201, content=jsonable_encoder({"message" : "delete sucessfully"}))
+    return JSONResponse(status_code=200, content=jsonable_encoder({"message" : "delete sucessfully"}))
