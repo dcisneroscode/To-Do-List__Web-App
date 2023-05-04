@@ -3,7 +3,7 @@ from database.database import Base
 
 from sqlalchemy import Column, String, Integer, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
-from sqlalchemy import ForeignKey
+
 
 
 class User_Model(Base):
@@ -16,6 +16,7 @@ class User_Model(Base):
     password = Column(String, nullable=False)
     email = Column(String, nullable=False)
     nickname = Column(String, unique=True)
+    
 
     task_union = relationship('Task_Model',  back_populates="user_union")
 
